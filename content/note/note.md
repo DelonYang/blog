@@ -39,3 +39,15 @@ date: 2019-01-18T16:38:54+08:00
         INSERT INTO newtable (*column) SELECT *column FROM oldtable WHERE ...; 
    2. 表不存在
         SELECT *column INTO newtable from oldtable WHERE ...;
+
+2. 查询时不区分大小写
+
+    1. 使用方法：`select * from atable where lower(name)=lower("regs")`
+    2. 比较时不区分：`select * from atbale where name="regs" COLLATE NOCASE`
+    3. 建列时设置不区分：`create table atable (name varchar COLLATE NOCASE)`
+3. 改名
+
+    1. 改表名：`alter table old_name rename to new_name`
+
+4. 数据库脚本
+   1. sqlite读取sql文件：sqlite3 data.db < tt.sql
