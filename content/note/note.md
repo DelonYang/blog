@@ -32,6 +32,16 @@ date: 2019-01-18T16:38:54+08:00
     
 ```
 
+常用git命令与alias：
+|:---|:----|
+|alias|command|
+|gst|git status|
+|gaa|git add --all|
+|gcmsg|git commit -m|
+|gcam|git commit -a -m|
+|gp|git push|
+|gl|git pull|
+
 ### 数据库
 
 1. 表迁移：
