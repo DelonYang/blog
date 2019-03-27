@@ -46,9 +46,14 @@ date: 2019-01-18T16:38:54+08:00
 
 1. 表迁移：
    1. 如果表已经存在
+
+        ```sql
         INSERT INTO newtable (*column) SELECT *column FROM oldtable WHERE ...; 
+        ```
    2. 表不存在
-        SELECT *column INTO newtable from oldtable WHERE ...;
+        ```sql
+        SELECT *column INTO newtable from oldtable WHERE ...;`
+        ```
 
 2. 查询时不区分大小写
 
