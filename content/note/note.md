@@ -29,10 +29,21 @@ date: 2019-01-18T16:38:54+08:00
     git checkout -- file 丢弃更改
     设置换行符：
     git config --global core.safecrlf true 提交时自动转换为LF
+
+    设置免密登陆：
+    git config --global credential.helper store
     
+    建立远程git仓库：
+    1. 创建git用户
+    2. 创建git仓库：git init --bare demo.git
+    3. 修改目录权限
+    4. 远程访问：git clone git@192.1.1.1:/data/gitrepo/demo.git
 ```
 
+[手动搭建git远程项目](https://www.jianshu.com/p/0c939f63af41)
+
 常用git命令与alias：
+
 |:---|:----|
 |alias|command|
 |gst|git status|

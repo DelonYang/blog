@@ -23,6 +23,7 @@ date: 2019-03-19T10:47:54+08:00
 2. 文本
 
     1. 文本颜色
+
         ```css
         body {
             color: red;/* 没有特别设置的该页面所有文本都会是红色 */
@@ -32,12 +33,14 @@ date: 2019-03-19T10:47:54+08:00
         }
         ```
     2. 对齐、缩进
+
         ```css
         h1 p{
             text-alian: center; /* left, center, right, justfiy; */
             text-indent: 2em;
         }
     3. 装饰
+    
         ```css
         p.main{
             text-decoration: none; /* overline, line-through, underline; */
@@ -74,6 +77,7 @@ date: 2019-03-19T10:47:54+08:00
         list-style: type position image;
         /* type: 类型 
         position: 前标的位置，默认 outside
+        */
     }
     ```
 6. 盒模型
@@ -91,7 +95,21 @@ date: 2019-03-19T10:47:54+08:00
         /*margin, padding 可以简写：
         10px 20px; 上下10， 左右20；
         10px 20px 30px; 上10， 左右20， 下30；
-        10px 20px 30px 40px；一次对应上下左右;
+        10px 20px 30px 40px；一次对应上右下左;
+
+        1、如果top、right、bottom、left的值相同，如下面代码：
+        margin:10px 10px 10px 10px;
+        可缩写为：
+        margin:10px;
+        2、如果top和bottom值相同、left和 right的值相同，如下面代码：
+        margin:10px 20px 10px 20px;
+        可缩写为：
+        margin:10px 20px;
+        3、如果left和right的值相同，如下面代码：
+        margin:10px 20px 30px 20px;
+        可缩写为：
+        margin:10px 20px 30px;
+        注意：padding、border的缩写方法和margin是一致的。
         */
     }
     ```
