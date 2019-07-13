@@ -44,8 +44,8 @@ date: 2019-01-18T16:38:54+08:00
 
 常用git命令与alias：
 
-|:---|:----|
 |alias|command|
+|:---|:----|
 |gst|git status|
 |gaa|git add --all|
 |gcmsg|git commit -m|
@@ -77,3 +77,16 @@ date: 2019-01-18T16:38:54+08:00
 
 4. 数据库脚本
    1. sqlite读取sql文件：sqlite3 data.db < tt.sql
+5. 用户管理
+   1. 添加用户： `create user name identified by 'passwd';`
+   2. 授权： `grant all privileges on db.table to name@'ip' identified by 'passwd';`
+   3. `flush privileges;`
+      1. all privileges：所有权限
+      2. select：读取权限
+      3. delete：删除权限
+      4. update：更新权限
+      5. drop：删除数据库、数据表权限
+   4. 删除用户 `drop user zhangsan@'%'`
+   5. 修改密码：`update mysql.user set password = password('zhangsannew') where user = 'zhangsan' and host = '%';`
+
+
