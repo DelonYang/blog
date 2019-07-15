@@ -90,3 +90,23 @@ date: 2019-01-18T16:38:54+08:00
    5. 修改密码：`update mysql.user set password = password('zhangsannew') where user = 'zhangsan' and host = '%';`
 
 
+### 工具
+#### 1. httpie
+
+[github地址](https://github.com/jakubroztocil/httpie)
+相比curl，wget，这简直是神器
+
+用法： `http [flag] method url item`
+
+method 为http方法，默认为 get 或 post，以参数为准
+
+传参：
+
+- get 查询字符串： key==value
+- post json/form key=value
+- 以原值传，int，bool等类型 key:=value
+- 设置header： name: value
+- 使用文件内容： key:=@value.json
+- 传文件: key@tt.png
+- 传json字符串： key:='[1,2,3]'
+- 下载文件： http -d/--download http://XXX.tar.gz
